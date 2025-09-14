@@ -1,64 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BELAURA | Tienda Saludable</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="logo">BELAURA</div>
-    <nav>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <!-- Si subiste logo.png se mostrará la imagen, si no se mostrará el texto -->
+      <img src="logo.png" alt="Logo BELAURA" class="logo-img" onerror="this.style.display='none'">
+      <div class="logo-text">BELAURA</div>
+    </div>
+
+    <nav class="main-nav">
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#categorias">Categorías</a></li>
-        <li><a href="#">Nosotros</a></li>
-        <li><a href="#">Contacto</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
-    <div class="carrito" onclick="toggleCarrito()">🛒 Mi Carrito (<span id="cart-count">0</span>)</div>
+
+    <div class="cart-toggle" onclick="toggleCarrito()">
+      🛒 <span id="cart-count">0</span>
+    </div>
   </header>
 
-  <!-- Banner -->
-  <section class="banner">
-    <h1>Bienvenid@ a BELAURA</h1>
-    <p>Productos naturales y saludables para tu bienestar 🌿✨</p>
-    <a href="#productos" class="btn">Ver Productos</a>
+  <!-- HERO / BANNER -->
+  <section class="hero" aria-label="Banner principal">
+    <!-- Usamos imagen directa de Unsplash para que no tengas que subirla; luego podés reemplazarla por una tuya -->
+    <!-- Si preferís subir tu propia imagen, subila como hero-yogurt.jpg y reemplazá la URL en CSS -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>PORQUE ELEGIMOS SENTIRNOS BIEN</h1>
+      <p class="hero-sub">Productos naturales, yogurt griego, alternativas dulces y saladas para tu día.</p>
+      <a href="#productos" class="btn-primary">Ver productos</a>
+    </div>
   </section>
 
-  <!-- Sección Productos -->
+  <!-- MAIN -->
   <main>
-    <section id="productos">
+    <section id="productos" class="section">
       <h2>Nuestros Productos</h2>
       <div class="productos-grid">
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1604908177079-30e67f3f853d" alt="Pan integral">
-          <h3>Pan Integral</h3>
-          <p>$1200</p>
-          <button class="btn" onclick="agregarAlCarrito('Pan Integral', 1200)">Agregar 🛒</button>
-        </div>
+        <!-- Tarjetas de ejemplo (luego las reemplazás por tus imágenes) -->
+        <article class="card">
+          <img src="https://source.unsplash.com/800x600/?yogurt,granola" alt="Yogur con granola">
+          <h3>Yogur Natural + Granola</h3>
+          <p class="price">$900</p>
+          <button class="btn" onclick="agregarAlCarrito('Yogur + Granola',900)">Agregar 🛒</button>
+        </article>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1506086679525-9d46e08ec6cf" alt="Mix de semillas">
-          <h3>Mix de Semillas</h3>
-          <p>$800</p>
-          <button class="btn" onclick="agregarAlCarrito('Mix de Semillas', 800)">Agregar 🛒</button>
-        </div>
+        <article class="card">
+          <img src="https://source.unsplash.com/800x600/?yogurt,fruit" alt="Yogur con frutas">
+          <h3>Yogur Griego con Frutas</h3>
+          <p class="price">$1200</p>
+          <button class="btn" onclick="agregarAlCarrito('Yogur Griego',1200)">Agregar 🛒</button>
+        </article>
 
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1590080876599-8d42f3ecf0a4" alt="Cosmética natural">
-          <h3>Cosmética Natural</h3>
-          <p>$2500</p>
-          <button class="btn" onclick="agregarAlCarrito('Cosmética Natural', 2500)">Agregar 🛒</button>
-        </div>
+        <article class="card">
+          <img src="https://source.unsplash.com/800x600/?savory,breakfast" alt="Opción salada">
+          <h3>Yogur Salado Gourmet</h3>
+          <p class="price">$1100</p>
+          <button class="btn" onclick="agregarAlCarrito('Yogur Salado',1100)">Agregar 🛒</button>
+        </article>
       </div>
     </section>
 
-    <!-- Sección Categorías -->
-    <section id="categorias">
+    <section id="categorias" class="section">
       <h2>Categorías</h2>
       <div class="categorias-grid">
         <div class="categoria">🥖 Panificados</div>
@@ -67,20 +80,32 @@
         <div class="categoria">🥗 Superfoods</div>
       </div>
     </section>
+
+    <section id="nosotros" class="section">
+      <h2>Nosotros</h2>
+      <p>En BELAURA elegimos productos cercanos, naturales y llenos de sabor. Cuidamos tu cuerpo y el planeta.</p>
+    </section>
+
+    <section id="contacto" class="section">
+      <h2>Contacto</h2>
+      <p>Escribinos por WhatsApp: <a href="https://wa.me/549XXXXXXXXX" target="_blank">Enviar mensaje</a></p>
+    </section>
   </main>
 
-  <!-- Carrito lateral -->
-  <aside id="carrito-panel">
-    <h3>Tu Carrito</h3>
+  <!-- CARRITO LATERAL -->
+  <aside id="carrito-panel" aria-hidden="true">
+    <h3>Tu carrito</h3>
     <ul id="cart-items"></ul>
-    <p>Total: $<span id="cart-total">0</span></p>
-    <button class="btn">Finalizar Compra</button>
+    <div class="cart-summary">Total: $<span id="cart-total">0</span></div>
+    <button class="btn-primary">Finalizar compra</button>
   </aside>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
-    <p>© 2025 BELAURA | Todos los derechos reservados</p>
-    <p>Seguinos en redes sociales: 🌸 Instagram | 💛 Facebook | 🌿 WhatsApp</p>
+    <div class="footer-inner">
+      <p>© 2025 BELAURA — Porque elegimos sentirnos bien</p>
+      <p>Síguenos: Instagram • Facebook • WhatsApp</p>
+    </div>
   </footer>
 
   <script src="script.js"></script>
