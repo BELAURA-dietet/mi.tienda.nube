@@ -318,7 +318,7 @@ body{
   justify-content:center;
   overflow:hidden;
   /* imagen por defecto desde Unsplash (consulta dinámica) */
-  background-image: url('https://source.unsplash.com/1600x900/?yogurt,granola,breakfast');
+  background-image: url('hero-yogurt.jpg');
   background-size:cover;
   background-position:center;
 }
