@@ -3,52 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BELAURA - Tienda Saludable</title>
+  <title>BELAURA | Tienda Saludable</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- ENCABEZADO -->
+  <!-- Header -->
   <header>
     <div class="logo">BELAURA</div>
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Productos</a></li>
+        <li><a href="#">Categorías</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
-    <div class="carrito">🛒 Mi carrito</div>
+    <div class="carrito">🛒 Mi Carrito</div>
   </header>
 
-  <!-- BANNER -->
+  <!-- Banner -->
   <section class="banner">
-    <h1>Bienvenidos a BELAURA</h1>
-    <p>Productos saludables para tu bienestar</p>
-    <a href="#" class="btn">Ver productos</a>
+    <h1>Bienvenid@ a BELAURA</h1>
+    <p>Productos naturales y saludables para tu bienestar 🌿✨</p>
+    <a href="#productos" class="btn">Ver Productos</a>
   </section>
 
-  <!-- SECCIONES -->
+  <!-- Sección Productos -->
   <main>
     <section id="productos">
       <h2>Nuestros Productos</h2>
-      <p>Muy pronto encontrarás aquí todos nuestros productos saludables 🌿</p>
+      <div class="productos-grid">
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1604908177079-30e67f3f853d" alt="Pan integral">
+          <h3>Pan Integral</h3>
+          <p>$1200</p>
+          <button class="btn">Agregar 🛒</button>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1506086679525-9d46e08ec6cf" alt="Mix de semillas">
+          <h3>Mix de Semillas</h3>
+          <p>$800</p>
+          <button class="btn">Agregar 🛒</button>
+        </div>
+
+        <div class="card">
+          <img src="https://images.unsplash.com/photo-1590080876599-8d42f3ecf0a4" alt="Cosmética natural">
+          <h3>Cosmética Natural</h3>
+          <p>$2500</p>
+          <button class="btn">Agregar 🛒</button>
+        </div>
+      </div>
     </section>
 
-    <section id="nosotros">
-      <h2>Sobre Nosotros</h2>
-      <p>En <b>BELAURA</b> creemos en un estilo de vida sano, natural y sostenible.</p>
-    </section>
-
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Escribinos a <a href="mailto:contacto@belaura.com">contacto@belaura.com</a></p>
+    <!-- Sección Categorías -->
+    <section id="categorias">
+      <h2>Categorías</h2>
+      <div class="categorias-grid">
+        <div class="categoria">🥖 Panificados</div>
+        <div class="categoria">🌿 Cosmética</div>
+        <div class="categoria">🍵 Infusiones</div>
+        <div class="categoria">🥗 Superfoods</div>
+      </div>
     </section>
   </main>
 
-  <!-- PIE -->
+  <!-- Footer -->
   <footer>
-    <p>© 2025 BELAURA - Todos los derechos reservados.</p>
+    <p>© 2025 BELAURA | Todos los derechos reservados</p>
+    <p>Seguinos en redes sociales: 🌸 Instagram | 💛 Facebook | 🌿 WhatsApp</p>
   </footer>
 </body>
 </html>
