@@ -13,13 +13,13 @@
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Categorías</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#categorias">Categorías</a></li>
         <li><a href="#">Nosotros</a></li>
         <li><a href="#">Contacto</a></li>
       </ul>
     </nav>
-    <div class="carrito">🛒 Mi Carrito</div>
+    <div class="carrito" onclick="toggleCarrito()">🛒 Mi Carrito (<span id="cart-count">0</span>)</div>
   </header>
 
   <!-- Banner -->
@@ -38,21 +38,21 @@
           <img src="https://images.unsplash.com/photo-1604908177079-30e67f3f853d" alt="Pan integral">
           <h3>Pan Integral</h3>
           <p>$1200</p>
-          <button class="btn">Agregar 🛒</button>
+          <button class="btn" onclick="agregarAlCarrito('Pan Integral', 1200)">Agregar 🛒</button>
         </div>
 
         <div class="card">
           <img src="https://images.unsplash.com/photo-1506086679525-9d46e08ec6cf" alt="Mix de semillas">
           <h3>Mix de Semillas</h3>
           <p>$800</p>
-          <button class="btn">Agregar 🛒</button>
+          <button class="btn" onclick="agregarAlCarrito('Mix de Semillas', 800)">Agregar 🛒</button>
         </div>
 
         <div class="card">
           <img src="https://images.unsplash.com/photo-1590080876599-8d42f3ecf0a4" alt="Cosmética natural">
           <h3>Cosmética Natural</h3>
           <p>$2500</p>
-          <button class="btn">Agregar 🛒</button>
+          <button class="btn" onclick="agregarAlCarrito('Cosmética Natural', 2500)">Agregar 🛒</button>
         </div>
       </div>
     </section>
@@ -69,10 +69,20 @@
     </section>
   </main>
 
+  <!-- Carrito lateral -->
+  <aside id="carrito-panel">
+    <h3>Tu Carrito</h3>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="cart-total">0</span></p>
+    <button class="btn">Finalizar Compra</button>
+  </aside>
+
   <!-- Footer -->
   <footer>
     <p>© 2025 BELAURA | Todos los derechos reservados</p>
     <p>Seguinos en redes sociales: 🌸 Instagram | 💛 Facebook | 🌿 WhatsApp</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
