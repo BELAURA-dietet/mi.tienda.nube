@@ -185,3 +185,39 @@ footer {
   color: var(--blanco);
   transform: scale(1.05);
 }
+/* Carrito lateral */
+#carrito-panel {
+  position: fixed;
+  top: 0;
+  right: -400px;
+  width: 300px;
+  height: 100%;
+  background: var(--rosa);
+  box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+  padding: 20px;
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+}
+
+#carrito-panel h3 {
+  color: var(--dorado);
+  margin-bottom: 15px;
+}
+
+#carrito-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+#carrito-panel li {
+  background: var(--blanco);
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+#carrito-panel button {
+  margin-top: 20px;
+  width: 100%;
+}
